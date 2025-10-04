@@ -68,7 +68,7 @@ CUDA_VISIBLE_DEVICES=0 python ../tools/train.py ./DHDet_LCDDET.py
 ```python
 conda activate DHDet
 cd /root/DHDet_codes/DHDet/0_configs
-python ../tools/test.py ./DHDet_LCDDET.py /root/epoch_20.pth --out ./DHDet_LCDDET_epoch_20_test.pkl
+python ../tools/test.py ./DHDet_LCDDET.py /root/epoch_60.pth --out ./DHDet_LCDDET_epoch_60_test.pkl
 ```
 
 ## Acknowledgment
