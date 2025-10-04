@@ -52,7 +52,7 @@ The code structure follows a similar organization to MMDetection 3.x and MMYOLO.
 ```python
 conda activate DHDet
 cd /root/DHDet_codes/DHDet/0_configs
-CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node=4 ../tools/train.py ./DHDet_PVELAD.py --launcher pytorch
+CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node=4 ../tools/train.py ./DHDet_LCDDET.py --launcher pytorch
 ```
 
 single gpu
@@ -60,7 +60,7 @@ single gpu
 ```python
 conda activate DHDet
 cd /root/DHDet_codes/DHDet/0_configs
-CUDA_VISIBLE_DEVICES=0 python ../tools/train.py ./DHDet_PVELAD.py
+CUDA_VISIBLE_DEVICES=0 python ../tools/train.py ./DHDet_LCDDET.py
 ```
 
 ## Test scripts
@@ -68,10 +68,7 @@ CUDA_VISIBLE_DEVICES=0 python ../tools/train.py ./DHDet_PVELAD.py
 ```python
 conda activate DHDet
 cd /root/DHDet_codes/DHDet/0_configs
-python ../tools/test.py ./DHDet_PVELAD.py /root/epoch_20.pth --out ./DHDet_PVELAD_epoch_20_test.pkl
-
-
-
+python ../tools/test.py ./DHDet_LCDDET.py /root/epoch_20.pth --out ./DHDet_LCDDET_epoch_20_test.pkl
 ```
 
 ## Acknowledgment
