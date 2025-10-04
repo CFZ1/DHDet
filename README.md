@@ -33,7 +33,7 @@ pip install similaritymeasures==1.1.0
 
    - [Google Drive](https://drive.google.com/file/d/1LaOrHZeql5Q59daweJzGHs5xyDoYFMJr/view?usp=drive_link)
 
- - The annotations are created using the [X-AnyLabeling software](https://github.com/CVHub520/X-AnyLabeling). 
+   The annotations are created using the [X-AnyLabeling software](https://github.com/CVHub520/X-AnyLabeling). 
 
 ## Code Structures
 
