@@ -1,0 +1,2 @@
+https://github.com/ultralytics/yolov5/releases/tag/v5.0，从这个地址复制过来
+代码是5.0版本的，模型参数也是5.0版本的，使用mmyolo/tools/model_converters/yolov5v5backbone_to_mmyolo.py转换了一下，yolov5s.pt--》yolov5sV5backbone.pth
