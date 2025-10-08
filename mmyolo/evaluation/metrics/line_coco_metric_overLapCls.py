@@ -687,7 +687,7 @@ class LineCocoMetric_overLapCls(CocoMetric):
                 if sum(max_length_>4000)>0:
                     max_length_count+=1
                 max_length_line.extend(copy.deepcopy(max_length_.tolist()))
-        logger.info(f'max_length_line, count>4000 numimgs ={max_length_count}, mean={np.array(max_length_line).mean()}, max={max(max_length_line)}, min={min(max_length_line)}')
+        # logger.info(f'max_length_line, count>4000 numimgs ={max_length_count}, mean={np.array(max_length_line).mean()}, max={max(max_length_line)}, min={min(max_length_line)}')
         #-------------for merged_preds-------------
         if self.merged_preds:
             if self.merged_count == 0:
