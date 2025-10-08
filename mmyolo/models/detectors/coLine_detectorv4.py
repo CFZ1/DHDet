@@ -47,6 +47,7 @@ from mmcv.ops import batched_nms
 from torchvision.ops import box_iou
 lineMin = 30
 def line2box_torch(line_bboxes, box_min=lineMin,img_height=None,img_width=None):
+    box_min=lineMin #------------for: test.py change lineMin
     # 使用torch.min和torch.max替换np.min和np.max
     min_x = torch.min(line_bboxes[:, 0::2], dim=-1)[0]
     max_x = torch.max(line_bboxes[:, 0::2], dim=-1)[0]
