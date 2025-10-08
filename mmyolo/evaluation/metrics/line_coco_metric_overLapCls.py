@@ -287,6 +287,7 @@ def calculate_iou(boxes1, boxes2):
     # iou.tril_(diagonal=-1)
     return iou
 def merge_bboxs(input_lines, line_min=lineMin):
+    line_min=lineMin #------------for: test.py change lineMin
     # line_bboxes = [num_line,num_point*2]
     # 寻找最小的x（x1），最小的y（y1），最大的x（x2），最大的y（y2）
     x_min = torch.min(input_lines[:, 0::2])
@@ -335,6 +336,7 @@ def filterLineBoxByIoU(bboxes, scores, lines, iou_threshold=0.5,score_threshold=
     return all_bboxes, all_scores
 
 def line2box(line_bboxes,box_min=lineMin):
+    box_min=lineMin #------------for: test.py change lineMin
     min_x = np.min(line_bboxes[:,0::2], axis=-1)
     max_x = np.max(line_bboxes[:,0::2], axis=-1)
     min_y = np.min(line_bboxes[:,1::2], axis=-1)
@@ -352,6 +354,7 @@ def line2box(line_bboxes,box_min=lineMin):
     results = np.stack((min_x_update, min_y_update, max_x_update, max_y_update), axis=-1)
     return results   
 def line2box_torch(line_bboxes, box_min=lineMin,img_height=None,img_width=None):
+    box_min=lineMin #------------for: test.py change lineMin
     # 使用torch.min和torch.max替换np.min和np.max
     min_x = torch.min(line_bboxes[:, 0::2], dim=-1)[0]
     max_x = torch.max(line_bboxes[:, 0::2], dim=-1)[0]
